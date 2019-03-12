@@ -3,9 +3,9 @@ Neural Networks from Scratch
 
 A fully connected two layer neural network in Python implemented on different frameworks with didactic purposes.
 
-<p align="center">
-    ![Input layer weights](./Weights.png)
-</p>
+![Input layer weights](./Weights.png)
+
+
 
 ## Goals
 
@@ -33,11 +33,24 @@ The goals of this project are:
     * `In progress...`
 
 
-## Installation
 
-To create a new virtual environment with Anaconda and the `requirements.txt` file:
+## Install & Run
 
-    $ conda create --name <env> --file requirements.txt
+1. Create a new virtual environment with Anaconda:
+
+
+    $ conda create --name <VIRTUAL_ENV_NAME> jupyter=1.0.0 keras=2.2.4 matplotlib=3.0.2 numpy=1.16.2 pandas=0.24.1 scipy=1.2.1 seaborn=0.9.0 tensorflow=1.12.0
+
+2. Activate the new Anaconda virtual environment
+
+
+    $ conda activate <VIRTUAL_ENV_NAME>
+
+3. Start the jupyter notebook server
+
+
+    $ jupyter notebook
+
 
 
 # Author
