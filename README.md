@@ -3,7 +3,11 @@ Neural Networks from Scratch
 
 A fully connected two layer neural network in Python implemented on different frameworks with didactic purposes.
 
-![Input layer weights](./Weights.png)
+<p align="center">
+    <img alt="Hidden layer weights" src="Weights.png">
+    <br />
+    Hidden layer weights
+</p>
 
 
 ## Goals
@@ -27,6 +31,15 @@ The goals of this project are:
 
 * Implement a similar network with the Keras framework and then tune the hyper parameters for better accuracy.
     * `04 -- Digits MNIST - Keras.ipynb`
+
+* Implement an interactive plot to visualize the images and the confidence in their predictions.
+    * `05 -- Digits MNIST - Interactive Plot.ipynb`
+
+    <p align="center">
+        <img alt="Digits MNIST - Interactive Plot" src="D_MNIST.gif">
+        <br />
+        Digits MNIST - Interactive Plot
+    </p>
 
 * Implement a more complex network using the Neural Network from Scratch library to classify the Fashion MNIST dataset.
     * `In progress...`
