@@ -1,6 +1,6 @@
 # Neural Networks from Scratch functions unittest
 # Victor Jose Novaes Pires
-# 2019-03-07
+# 2019-03-15
 
 import unittest
 import numpy as np
@@ -52,7 +52,7 @@ class TestNNfromScratch(unittest.TestCase):
 
 
     def test_feedforward(self):
-        a3, a2, z2, a1 = nnfs.feedforward(X, y, Θ1, Θ2)
+        a3, a2, z2, a1 = nnfs.feedforward(X, Θ1, Θ2)
         self.assertEqual(a1.shape, (X.shape[0], (X.shape[1] + 1)))
         self.assertEqual(z2.shape, (Θ1.shape[0], X.shape[0]))
         self.assertEqual(a2.shape, ((Θ1.shape[0] + 1), X.shape[0]))

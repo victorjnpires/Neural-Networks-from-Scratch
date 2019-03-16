@@ -1,8 +1,8 @@
 # Neural Networks from Scratch functions
 # Victor Jose Novaes Pires
-# 2019-03-07
+# 2019-03-15
 
-__version__ = 1.0
+__version__ = '1.0.1'
 
 import numpy as np
 
@@ -25,7 +25,7 @@ def sigmoid_gradient(z):
     return sigmoid(z)*(1 - sigmoid(z))
 
 
-def feedforward(X, y, Θ1, Θ2):
+def feedforward(X, Θ1, Θ2):
     # Input layer activation (with bias)
     a1 = np.hstack((np.ones((X.shape[0], 1)), X))
 
@@ -64,7 +64,7 @@ def cost(X, y, Θ1, Θ2, λ):
 
     m = y.shape[0]
 
-    h, *_ = feedforward(X, y, Θ1, Θ2)
+    h, *_ = feedforward(X, Θ1, Θ2)
 
     # Convert an iterable of indices to one-hot encoded labels
     y_ohe = np.eye(y.shape[0], len(np.unique(y)))[y.reshape(-1)]
@@ -101,7 +101,7 @@ def gradient(X, y, Θ1, Θ2, λ, c=None):
         D1, D2: Regularized gradients
     """
 
-    a3, a2, z2, a1 = feedforward(X, y, Θ1, Θ2)
+    a3, a2, z2, a1 = feedforward(X, Θ1, Θ2)
 
     # c should be passed to ensure that there will be one column for each class.
     # With batches there is the possibility that len(np.unique(y)) != number of
@@ -129,7 +129,7 @@ def gradient(X, y, Θ1, Θ2, λ, c=None):
 
 
 def predict(X, y, Θ1, Θ2):
-    h, *_ = feedforward(X, y, Θ1, Θ2)
+    h, *_ = feedforward(X, Θ1, Θ2)
     predictions = np.argmax(h, axis=0).reshape(-1, 1)
     return predictions
 
