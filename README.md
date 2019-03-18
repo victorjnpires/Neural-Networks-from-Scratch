@@ -36,13 +36,31 @@ The goals of this project are:
     * `05 -- Digits MNIST - Interactive Plot.ipynb`
 
     <p align="center">
-        <img alt="Digits MNIST - Interactive Plot" src="D_MNIST.gif">
+        <img alt="Digits MNIST - Interactive Plot" src="MNIST_D.gif">
         <br />
         Digits MNIST - Interactive Plot
     </p>
 
-* Implement a more complex network using the Neural Network from Scratch library to classify the Fashion MNIST dataset.
-    * `In progress...`
+* Build a bigger neural network from scratch to classify the Fashion MNIST dataset.
+    * `11 -- Fashion MNIST - NumPy.ipynb`
+
+* Increase the best gradient descent accuracy with SciPy’s optimization.
+    * `12 -- Fashion MNIST - SciPy.ipynb`
+
+* Implement a similar but more complex network from scratch with the TensorFlow framework.
+    * `13 -- Fashion MNIST - TensorFlow.ipynb`
+
+* Implement a Convolutional Neural Network with the Keras framework for best accuracy.
+    * `14 -- Fashion MNIST - Keras.ipynb`
+
+* Implement an interactive plot to visualize the images and the confidence in their predictions.
+    * `15 -- Fashion MNIST - Interactive Plot.ipynb`
+
+    <p align="center">
+        <img alt="Fashion MNIST - Interactive Plot" src="MNIST_F.gif">
+        <br />
+        Fashion MNIST - Interactive Plot
+    </p>
 
 
 ## Install & Run

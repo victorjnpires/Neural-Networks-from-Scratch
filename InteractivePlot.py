@@ -1,8 +1,8 @@
 # Interactive Plot functions
 # Victor Jose Novaes Pires
-# 2019-03-15
+# 2019-03-18
 
-__version__ = '1.0'
+__version__ = '1.1'
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -15,18 +15,29 @@ num_classes = np.arange(10)
 xticks = np.arange(0, 10, 1)
 yticks = np.arange(0, 1.1, .1)
 
-def make_plot(image, predictions, true_label, pred_label):
+def make_plot(image, predictions, true_label, pred_label, names=None):
     plt.figure(figsize=(11, 5))
 
     plt.subplot(121)
-    plt.title(f"Label: {true_label}")
-    plt.imshow(image, cmap='gray')
+    if names is None:
+        plt.title(f"Label: {true_label}")
+        plt.imshow(image, cmap='gray')
+    else:
+        plt.title(f"Label: {names[true_label]}")
+        if pred_label == true_label:
+            plt.imshow(image, cmap='Greens')
+        else:
+            plt.imshow(image, cmap='Reds')
     plt.axis('off')
 
     ax = plt.subplot(122)
     bp = ax.bar(num_classes, predictions, color=blue)
-    ax.set_title(f"Predicted: {pred_label}")
     ax.set_xticks(xticks)
+    if names is None:
+        ax.set_title(f"Predicted: {pred_label}")
+    else:
+        ax.set_title(f"Predicted: {names[pred_label]}")
+        ax.set_xticklabels([names[x] for x in xticks], rotation=90)
     ax.set_yticks(yticks)
     ax.set_ylim(0, 1.1)
     add_value_labels(ax)
